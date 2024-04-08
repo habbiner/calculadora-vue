@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora - Em Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="calculadora">
+            <div class="display">
+                {{ valorCorrente || 0 }}
+            </div>
+            <div class="linha">
+                <button class="operador" @click="limpar">C</button>
+            </div>
+            <div class="linha">
+                <button @click="juntarNumeros('7')">7</button>
+                <button @click="juntarNumeros('8')">8</button>
+                <button @click="juntarNumeros('9')">9</button>
+                <button class="operador" @click="dividir">/</button>
+            </div>
+            <div class="linha">
+                <button @click="juntarNumeros('4')">4</button>
+                <button @click="juntarNumeros('5')">5</button>
+                <button @click="juntarNumeros('6')">6</button>
+                <button class="operador" @click="multiplicar">x</button>
+            </div>
+            <div class="linha">
+                <button @click="juntarNumeros('1')">1</button>
+                <button @click="juntarNumeros('2')">2</button>
+                <button @click="juntarNumeros('3')">3</button>
+                <button class="operador" @click="subtrair">-</button>
+            </div>
+            <div class="linha">
+                <button class="decimal" @click="ponto">.</button>
+                <button @click="juntarNumeros('0')">0</button>
+                <button class="igual" @click="resultado">=</button>
+                <button class="operador" @click="somar">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="index.js"></script>
